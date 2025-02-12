@@ -223,7 +223,7 @@ header div {
 
     /* ---------------------------- Configurações do header ---------------------------- */
 
-    .pesquisaCompleta{
+    #usuarioHeader, #pesquisaVoz{
         display: none;
     }
 }
