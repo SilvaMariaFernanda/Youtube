@@ -1,0 +1,219 @@
+:root {
+    --cinza29: rgb(229, 229, 229);
+    --cinza240: rgb(240, 240, 240);
+    --cinza198: rgb(198, 198, 198);
+    --cinza248: rgb(248, 248, 248);
+    --cinza231: rgb(231, 231, 231);
+    --cinza242: rgb(242, 242, 242);
+    --cinza217: rgb(217, 217, 217);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", serif;
+}
+
+/* Tira a borda preta ao clicar em um input */
+input:focus {
+    outline: none;
+}
+
+/* Padrão dos links */
+.links {
+    text-decoration: none;
+    color: black;
+}
+
+/* ---------------------------- Configurações do header ---------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+    height: 3.5rem;
+    width: 100%;
+    gap: 0.5rem;
+    /* border-bottom: 1px red solid; */
+}
+
+/* Todas as divs dentro do header tem essas configurações */
+header div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Configurações da Logo + o BR do header */
+#logoBr {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+/* Config da imagem dentro da #logoBr */
+#logoBr svg {
+    height: 20px;
+}
+
+/* Config do BR dentro do #logoBr */
+#logoBr span {
+    font-size: 10px;
+    display: flex;
+    color: grey;
+    position: relative;
+    top: -10px;
+    right: -4px;
+}
+
+/* Configurações padrão de um botão */
+.padraoBT {
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all;
+}
+
+/* Hover do .padraoBT   */
+.padraoBT:hover {
+    background-color: var(--cinza29);
+}
+
+/* Configuração padrão para todos os ícones SVG */
+.padraoIcons {
+    height: 24px;
+    width: 24px;
+    fill: black;
+}
+
+/* Configurações do link da foto do usuário */
+.linkUsuario {
+    margin-right: 0.8rem;
+}
+
+/* Configurações da foto do usuário */
+.usuarioFoto {
+    height: 2rem;
+    width: 2rem;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* Barra de pesquisa */
+.pesquisaCompleta {
+    width: 50%;
+}
+
+/* Div barra da pesquisa + tecladinho */
+.barraPesquisa {
+    height: 2.5rem;
+    width: 100%;
+    min-width: 3rem;
+    border: solid 1px var(--cinza198);
+    border-radius: 1.25rem 0 0 1.25rem;
+    padding: 0 0.8rem 0 1rem;
+    box-shadow: inset 0 1px 2px #eee;
+}
+
+/* Form dentro da div .barraPesquisa */
+.barraPesquisa form {
+    width: 100%;
+}
+
+/* Tecladinho */
+.barraPesquisa img {
+    cursor: pointer;
+}
+
+/* Configurações do Input de pesquisa */
+#inputPesquisa {
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+}
+
+/* Botão que envia a pesquisa */
+#enterPesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    background-color: var(--cinza248);
+    border: 1px solid var(--cinza198);
+    border-left: none;
+    border-radius: 0 1.25rem 1.25rem 0;
+}
+
+/* Hover do tecladinho */
+#enterPesquisa:hover {
+    background-color: var(--cinza240);
+}
+
+/* Agrupamento do input pesquisa + tecladinho e Botão que envia a pesquisa */
+#barraPCompleta {
+    display: flex;
+    width: 100%;
+    margin-left: 3rem;
+    gap: 0;
+}
+
+/* Botão de pesquisa por voz */
+#pesquisaVoz {
+    background-color: var(--cinza242);
+    transition: all;
+}
+
+/* Hover do #pesquisaVoz */
+#pesquisaVoz:hover {
+    background-color: var(--cinza217);
+}
+
+/* ----------------------------------------------------- Responsividade ----------------------------------------------------- */
+
+@media screen and (max-width: 650px) {
+
+    /* ---------------------------- Configurações do header ---------------------------- */
+
+    header {
+        padding: 0 0.5rem;
+    }
+
+    .barraPesquisa{
+        display: none;
+    }
+
+    #enterPesquisa{
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    .padraoBT{
+        background-color: transparent !important;
+    }
+
+    .padraoBT:hover {
+        background-color: var(--cinza29) !important;
+    }
+
+    #barraPCompleta {
+        justify-content: flex-end;
+    }
+
+    .pesquisaCompleta {
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    #menuLogo{
+        gap: 1.25rem;
+    }
+}
